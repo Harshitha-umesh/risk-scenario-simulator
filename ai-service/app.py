@@ -20,10 +20,12 @@ limiter = Limiter(
 from routes.describe import describe_bp
 from routes.recommend import recommend_bp
 from routes.generate_report import generate_report_bp
+from routes.query import query_bp
 
 app.register_blueprint(describe_bp)
 app.register_blueprint(recommend_bp)
 app.register_blueprint(generate_report_bp)
+app.register_blueprint(query_bp)
 
 @app.route("/health", methods=["GET"])
 def health():
