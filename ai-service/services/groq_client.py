@@ -1,13 +1,11 @@
 import os
 import requests
 import time
-import hashlib
 from dotenv import load_dotenv
 
 load_dotenv()
 
 API_KEY = os.getenv("GROQ_API_KEY")
-
 
 class GroqClient:
 
@@ -22,7 +20,7 @@ class GroqClient:
     def generate(self, prompt):
         start_time = time.time()
 
-        for attempt in range(3):  # retry logic
+        for attempt in range(3):
             try:
                 data = {
                     "model": self.model,
@@ -32,7 +30,13 @@ class GroqClient:
                     "temperature": 0.3
                 }
 
-                response = requests.post(self.url, headers=self.headers, json=data)
+                # ✅ VERY IMPORTANT (prevents hanging)
+                response = requests.post(
+                    self.url,
+                    headers=self.headers,
+                    json=data,
+                    timeout=10   # 🔥 FIX: no more infinite loading
+                )
 
                 if response.status_code != 200:
                     raise Exception(f"API Error: {response.text}")
@@ -57,9 +61,13 @@ class GroqClient:
                 print(f"[Retry {attempt+1}] Error:", e)
                 time.sleep(2)
 
-        # fallback response
+        # ✅ FINAL FALLBACK
         return {
-            "result": "AI temporarily unavailable. Please try again later.",
+            "result": {
+                "answer": "AI temporarily unavailable. Please try again later.",
+                "risk_type": "General",
+                "confidence": 0.5
+            },
             "meta": {
                 "model_used": self.model,
                 "response_time_ms": 0,

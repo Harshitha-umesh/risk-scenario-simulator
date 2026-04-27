@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from services.groq_client import GroqClient
-from services.chroma_client import query_documents
 from services.redis_client import get_cache, set_cache
+from services.logger import logger
 import json
 
 query_bp = Blueprint("query", __name__)
@@ -12,35 +12,31 @@ def query():
     try:
         question = request.json.get("question")
 
+        logger.info(f"Received question: {question}")
+
         if not question:
             return jsonify({"error": "Question is required"}), 400
 
-        # STEP 0: CACHE CHECK
+        # ✅ CACHE CHECK
         cache_key = f"query:{question}"
         cached = get_cache(cache_key)
 
         if cached:
+            logger.info("Cache hit")
             return jsonify({
                 "result": json.loads(cached),
                 "cached": True,
-                "meta": {
-                    "is_fallback": False
-                }
+                "meta": {"is_fallback": False}
             })
 
-        # Step 1: Get context
-        docs = query_documents(question)
-        context = " ".join(docs[0]) if docs else ""
+        # ✅ NO CHROMA (fast startup)
+        docs = []
+        context = ""
 
-        # Step 2: Prompt
+        # ✅ PROMPT
         prompt = f"""
 You are a professional Risk Analysis AI.
-
-Use ONLY the given context.
 Answer in 2-3 lines.
-
-Context:
-{context}
 
 Question:
 {question}
@@ -53,38 +49,29 @@ Return ONLY JSON:
 }}
 """
 
-        # Step 3: AI call with fallback
         try:
+            logger.info("Calling AI model")
+
             ai_response = client.generate(prompt)
 
-            response = ai_response.get("result") if isinstance(ai_response, dict) else ai_response
-            meta = ai_response.get("meta", {}) if isinstance(ai_response, dict) else {}
+            response = ai_response.get("result")
+            meta = ai_response.get("meta", {})
 
-            is_fallback = False
+            is_fallback = meta.get("is_fallback", False)
 
         except Exception as e:
-            # 🟡 FALLBACK RESPONSE
+            logger.warning("AI failed, using fallback response")
+
             response = {
                 "answer": "Potential risk detected. Further analysis recommended.",
                 "risk_type": "General",
                 "confidence": 0.5
             }
 
-            meta = {
-                "error": str(e)
-            }
-
+            meta = {"error": str(e)}
             is_fallback = True
 
-        # Step 4: Fallback if empty
-        if not response:
-            response = {
-                "answer": "Unable to process",
-                "risk_type": "Unknown",
-                "confidence": 0.5
-            }
-
-        # Step 5: Convert string → JSON
+        # ✅ HANDLE STRING RESPONSE
         if isinstance(response, str):
             try:
                 response = json.loads(response)
@@ -95,9 +82,11 @@ Return ONLY JSON:
                     "confidence": 0.6
                 }
 
-        # STEP 6: SAVE CACHE (only non-fallback)
+        # ✅ CACHE ONLY IF NOT FALLBACK
         if not is_fallback:
             set_cache(cache_key, json.dumps(response))
+
+        logger.info("Response generated successfully")
 
         return jsonify({
             "result": response,
@@ -110,4 +99,5 @@ Return ONLY JSON:
         })
 
     except Exception as e:
+        logger.error(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500

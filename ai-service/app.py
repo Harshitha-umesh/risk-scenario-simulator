@@ -1,22 +1,18 @@
 from flask import Flask
-from routes.categorise import categorise_bp
-from routes.query import query_bp
 from routes.health import health_bp
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-from routes.report import report_bp
+from routes.query import query_bp
 
+# ✅ FIRST create app
 app = Flask(__name__)
-limiter = Limiter(
-    get_remote_address,
-    app=app,
-    default_limits=[" 100 per minute"]
-)
 
-app.register_blueprint(categorise_bp)
+# ✅ THEN register blueprints
 app.register_blueprint(query_bp)
 app.register_blueprint(health_bp)
-app.register_blueprint(report_bp)
+
+@app.route("/")
+def home():
+    return "Server working ✅"
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    print("Flask is starting...")
+    app.run(debug=True, port=5000, use_reloader=False)

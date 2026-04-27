@@ -1,0 +1,78 @@
+2026-04-26 11:46:55,535 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-26 11:46:55,536 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-26 11:46:55,542 - INFO -  * Restarting with stat
+2026-04-26 11:47:41,428 - WARNING -  * Debugger is active!
+2026-04-26 11:47:41,480 - INFO -  * Debugger PIN: 224-895-192
+2026-04-26 11:55:54,697 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-26 11:55:54,697 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-26 11:55:54,707 - INFO -  * Restarting with stat
+2026-04-26 11:56:30,351 - WARNING -  * Debugger is active!
+2026-04-26 11:56:30,359 - INFO -  * Debugger PIN: 224-895-192
+2026-04-26 12:13:46,149 - INFO - Received question: cyber attack risk
+2026-04-26 12:13:49,972 - INFO - Calling AI model
+2026-04-26 12:13:51,453 - INFO - Response generated successfully
+2026-04-26 12:13:51,457 - INFO - 127.0.0.1 - - [26/Apr/2026 12:13:51] "POST /query HTTP/1.1" 200 -
+2026-04-26 12:29:43,527 - INFO - Received question: cyber attack risk
+2026-04-26 12:29:43,528 - INFO - Cache hit
+2026-04-26 12:29:43,528 - INFO - 127.0.0.1 - - [26/Apr/2026 12:29:43] "POST /query HTTP/1.1" 200 -
+2026-04-26 12:33:35,723 - INFO - 127.0.0.1 - - [26/Apr/2026 12:33:35] "GET /health HTTP/1.1" 200 -
+2026-04-26 12:33:36,162 - INFO - 127.0.0.1 - - [26/Apr/2026 12:33:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-26 12:51:13,912 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-26 12:51:13,926 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-26 12:51:13,962 - INFO -  * Restarting with stat
+2026-04-26 12:53:56,436 - WARNING -  * Debugger is active!
+2026-04-26 12:53:56,556 - INFO -  * Debugger PIN: 224-895-192
+2026-04-26 14:01:27,296 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-26 14:01:27,297 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-26 14:01:27,328 - INFO -  * Restarting with stat
+2026-04-26 14:02:15,877 - WARNING -  * Debugger is active!
+2026-04-26 14:02:16,622 - INFO -  * Debugger PIN: 224-895-192
+2026-04-26 19:51:45,639 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-26 19:51:45,658 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-26 19:51:45,686 - INFO -  * Restarting with stat
+2026-04-26 19:53:10,083 - WARNING -  * Debugger is active!
+2026-04-26 19:53:10,165 - INFO -  * Debugger PIN: 224-895-192
+2026-04-27 12:18:52,952 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 12:18:52,970 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 12:18:53,000 - INFO -  * Restarting with stat
+2026-04-27 12:24:28,840 - WARNING -  * Debugger is active!
+2026-04-27 12:24:29,018 - INFO -  * Debugger PIN: 224-895-192
+2026-04-27 13:07:49,239 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\services\\chroma_client.py', reloading
+2026-04-27 13:17:29,773 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 13:17:29,803 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 13:17:29,831 - INFO -  * Restarting with stat
+2026-04-27 13:19:12,022 - WARNING -  * Debugger is active!
+2026-04-27 13:19:12,277 - INFO -  * Debugger PIN: 224-895-192
+2026-04-27 13:41:25,230 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 13:41:25,230 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 13:41:25,257 - INFO -  * Restarting with stat
+2026-04-27 13:41:43,622 - WARNING -  * Debugger is active!
+2026-04-27 13:41:43,680 - INFO -  * Debugger PIN: 224-895-192
+2026-04-27 13:50:06,930 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\services\\chroma_client.py', reloading
+2026-04-27 13:53:28,229 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 13:53:28,229 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 13:53:28,253 - INFO -  * Restarting with stat
+2026-04-27 13:53:40,680 - WARNING -  * Debugger is active!
+2026-04-27 13:53:40,683 - INFO -  * Debugger PIN: 224-895-192
+2026-04-27 14:28:58,560 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\app.py', reloading
+2026-04-27 14:33:43,039 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 14:33:43,040 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 15:15:25,234 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 15:15:25,235 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 15:35:39,302 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 15:35:39,302 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 15:36:06,053 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 15:36:06,054 - INFO - [33mPress CTRL+C to quit[0m
