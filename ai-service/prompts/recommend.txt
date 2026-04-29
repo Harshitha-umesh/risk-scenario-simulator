@@ -1,0 +1,26 @@
+You are a professional risk consultant. Given the following risk scenario, provide 3 actionable recommendations.
+
+Risk Scenario: {input}
+
+Respond in this exact JSON format:
+{
+  "recommendations": [
+    {
+      "action_type": "Prevent / Mitigate / Transfer / Accept",
+      "description": "Clear description of the recommended action",
+      "priority": "High / Medium / Low"
+    },
+    {
+      "action_type": "Prevent / Mitigate / Transfer / Accept",
+      "description": "Clear description of the recommended action",
+      "priority": "High / Medium / Low"
+    },
+    {
+      "action_type": "Prevent / Mitigate / Transfer / Accept",
+      "description": "Clear description of the recommended action",
+      "priority": "High / Medium / Low"
+    }
+  ]
+}
+
+Respond with JSON only. No extra text.

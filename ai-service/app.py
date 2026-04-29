@@ -1,10 +1,8 @@
-from flask import Flask
-from routes.health import health_bp
-from routes.query import query_bp
-from routes.report import report_bp
+from flask import Flask, request, jsonify
+from services.security import validate_input, sanitize
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
-
-# ✅ FIRST create app
 app = Flask(__name__)
 
 # ✅ THEN register blueprints
@@ -12,9 +10,10 @@ app.register_blueprint(health_bp)
 app.register_blueprint(query_bp)
 app.register_blueprint(report_bp)
 
+# Optional health check route
 @app.route("/")
 def home():
-    return "Server working ✅"
+    return "Server is running"
 
 if __name__ == "__main__":
     print("Flask is starting...")

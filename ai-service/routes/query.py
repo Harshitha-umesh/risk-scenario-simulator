@@ -1,9 +1,10 @@
 from flask import Blueprint, request, jsonify
-from services.groq_client import GroqClient
-from services.redis_client import get_cache, set_cache
-from services.logger import logger
+from services.groq_client import call_groq
+from services.chroma_client import query_knowledge
 import json
+import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 query_bp = Blueprint("query", __name__)
 
 @query_bp.route("/query", methods=["POST"])
