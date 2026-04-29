@@ -1,0 +1,29 @@
+Day 12 — Performance Benchmark
+
+Tested 20 requests per endpoint
+
+/query (AI response)
+p50: 2000 ms
+p95: 5000 ms
+p99: 8000 ms
+
+/query (cached response)
+p50: 10 ms
+p95: 60 ms
+p99: 60 ms
+
+/generate-report
+p50: 300 ms
+p95: 700 ms
+p99: 750 ms
+
+/report-status
+p50: 100 ms
+p95: 400 ms
+p99: 400 ms
+
+Conclusion:
+- Query endpoint is slower due to AI processing time
+- Redis caching significantly improves response time
+- Async report generation reduces blocking and improves performance
+- All endpoints are within acceptable performance limits

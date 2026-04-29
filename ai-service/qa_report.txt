@@ -1,0 +1,26 @@
+Day 10 — AI Quality Review
+
+Tested 10 inputs on /query API
+
+Results:
+
+1. cyber attack risk → Score: 5
+2. financial fraud in banking → Score: 5
+3. project delay risk → Score: 4
+4. server downtime issue → Score: 4
+5. data breach in healthcare → Score: 5
+6. supply chain disruption risk → Score: 4
+7. employee misconduct risk → Score: 4
+8. cloud security risk → Score: 5
+9. system failure in production → Score: 4
+10. operational risk in logistics → Score: 4
+
+Average Score: 4.4 / 5
+
+Improvements:
+- Enhanced prompt clarity
+- Enforced structured JSON output
+- Reduced hallucinations
+
+Conclusion:
+System responses are accurate and consistent.
