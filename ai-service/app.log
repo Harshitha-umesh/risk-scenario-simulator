@@ -76,3 +76,45 @@
 2026-04-27 15:36:06,053 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2026-04-27 15:36:06,054 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 15:40:18,432 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-27 15:40:18,432 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-27 15:44:53,318 - INFO - Received question: cyber attack risk
+2026-04-27 15:44:53,318 - INFO - Calling AI model
+2026-04-27 15:44:56,599 - INFO - Response generated successfully
+2026-04-27 15:44:56,608 - INFO - 127.0.0.1 - - [27/Apr/2026 15:44:56] "POST /query HTTP/1.1" 200 -
+2026-04-27 15:46:21,614 - INFO - Received question: cyber attack risk
+2026-04-27 15:46:21,614 - INFO - Cache hit
+2026-04-27 15:46:21,615 - INFO - 127.0.0.1 - - [27/Apr/2026 15:46:21] "POST /query HTTP/1.1" 200 -
+2026-04-29 12:38:01,527 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-29 12:38:01,567 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-29 12:51:31,674 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-29 12:51:31,675 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-29 12:57:25,751 - INFO - Received question: cyber attack risk
+2026-04-29 12:57:25,752 - INFO - Calling AI model
+2026-04-29 12:57:29,954 - INFO - Response generated successfully
+2026-04-29 12:57:29,961 - INFO - 127.0.0.1 - - [29/Apr/2026 12:57:29] "POST /query HTTP/1.1" 200 -
+2026-04-29 12:58:16,736 - INFO - Received question: cyber attack risk
+2026-04-29 12:58:16,737 - INFO - Cache hit
+2026-04-29 12:58:16,737 - INFO - 127.0.0.1 - - [29/Apr/2026 12:58:16] "POST /query HTTP/1.1" 200 -
+2026-04-29 12:58:35,265 - INFO - 127.0.0.1 - - [29/Apr/2026 12:58:35] "[33mPOST /generate-report HTTP/1.1[0m" 404 -
+2026-04-29 13:05:09,391 - INFO - 127.0.0.1 - - [29/Apr/2026 13:05:09] "[33mPOST /generate-report HTTP/1.1[0m" 404 -
+2026-04-29 13:06:01,792 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-29 13:06:01,792 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-29 13:06:24,983 - INFO - 127.0.0.1 - - [29/Apr/2026 13:06:24] "POST /generate-report HTTP/1.1" 200 -
+2026-04-29 13:07:42,168 - INFO - 127.0.0.1 - - [29/Apr/2026 13:07:42] "[33mGET /report-status/YOUR_JOB_ID HTTP/1.1[0m" 404 -
+2026-04-29 13:10:00,197 - INFO - 127.0.0.1 - - [29/Apr/2026 13:10:00] "POST /generate-report HTTP/1.1" 200 -
+2026-04-29 13:10:59,742 - INFO - 127.0.0.1 - - [29/Apr/2026 13:10:59] "GET /report-status/560c846f-b447-4666-8e91-4259c69add27 HTTP/1.1" 200 -
+2026-04-29 13:11:55,044 - INFO - 127.0.0.1 - - [29/Apr/2026 13:11:55] "GET /health HTTP/1.1" 200 -
+2026-04-29 13:11:55,464 - INFO - 127.0.0.1 - - [29/Apr/2026 13:11:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-29 13:13:32,236 - INFO - Received question: cyber attack risk
+2026-04-29 13:13:32,236 - INFO - Calling AI model
+2026-04-29 13:13:38,708 - INFO - Response generated successfully
+2026-04-29 13:13:38,709 - INFO - 127.0.0.1 - - [29/Apr/2026 13:13:38] "POST /query HTTP/1.1" 200 -
+2026-04-29 13:17:02,904 - INFO - Received question: cyber attack risk
+2026-04-29 13:17:02,904 - INFO - Calling AI model
+2026-04-29 13:17:06,052 - INFO - Response generated successfully
+2026-04-29 13:17:06,053 - INFO - 127.0.0.1 - - [29/Apr/2026 13:17:06] "POST /query HTTP/1.1" 200 -

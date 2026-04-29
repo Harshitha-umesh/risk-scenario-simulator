@@ -1,6 +1,8 @@
 from flask import Flask
 from routes.health import health_bp
 from routes.query import query_bp
+from routes.report import report_bp
+
 
 # ✅ FIRST create app
 app = Flask(__name__)
@@ -8,6 +10,7 @@ app = Flask(__name__)
 # ✅ THEN register blueprints
 app.register_blueprint(query_bp)
 app.register_blueprint(health_bp)
+app.register_blueprint(report_bp)
 
 @app.route("/")
 def home():
